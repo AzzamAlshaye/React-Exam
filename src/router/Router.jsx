@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import Nav from "../components/Navbar";
 import Footer from "../components/Footer";
 import Register from "../Auth/Register";
+import LoginPage from "../Auth/Login";
 
 function RootLayout() {
   return (
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
 
   // standalone auth pages (no RootLayout)
-  // {path: , element:  },
+  { path: "login", element: <LoginPage /> },
   // {path: , element:  },
 ]);
 

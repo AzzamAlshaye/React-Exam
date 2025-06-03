@@ -5,39 +5,39 @@ import axios from "axios";
 import { FaUserPlus } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 
-export default function Register() {
+export default function LoginPage() {
   const navigate = useNavigate();
   const initialValues = {
     email: "",
     password: "",
   };
 
-  //   const validate = (values) => {
-  //     const errors = {};
-  //     if (!values.fullName) {
-  //       errors.fullName = "Required";
-  //     } else if (values.fullName.length < 3) {
-  //       errors.fullName = "Must be at least 3 characters";
-  //     } else if (values.fullName.length > 50) {
-  //       errors.fullName = "Can't exceed 50 characters";
-  //     }
-  //     if (!values.email) {
-  //       errors.email = "Required";
-  //     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-  //       errors.email = "Invalid email address";
-  //     }
-  //     if (!values.password) {
-  //       errors.password = "Required";
-  //     } else if (values.password.length < 8) {
-  //       errors.password = "Must be at least 8 characters";
-  //     }
-  //     if (!values.confirmPassword) {
-  //       errors.confirmPassword = "Required";
-  //     } else if (values.confirmPassword !== values.password) {
-  //       errors.confirmPassword = "Passwords must match";
-  //     }
-  //     return errors;
-  //   };
+  const validate = (values) => {
+    const errors = {};
+    if (!values.fullName) {
+      errors.fullName = "Required";
+    } else if (values.fullName.length < 3) {
+      errors.fullName = "Must be at least 3 characters";
+    } else if (values.fullName.length > 50) {
+      errors.fullName = "Can't exceed 50 characters";
+    }
+    if (!values.email) {
+      errors.email = "Required";
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+      errors.email = "Invalid email address";
+    }
+    if (!values.password) {
+      errors.password = "Required";
+    } else if (values.password.length < 8) {
+      errors.password = "Must be at least 8 characters";
+    }
+    if (!values.confirmPassword) {
+      errors.confirmPassword = "Required";
+    } else if (values.confirmPassword !== values.password) {
+      errors.confirmPassword = "Passwords must match";
+    }
+    return errors;
+  };
 
   const onSubmit = async (values, { setSubmitting, resetForm }) => {
     const userPayload = {

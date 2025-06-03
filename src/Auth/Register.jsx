@@ -4,16 +4,21 @@ import { useNavigate, Link } from "react-router";
 import axios from "axios";
 import { FaUserPlus } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Register() {
   const navigate = useNavigate();
+
   const initialValues = {
-    email: "",
+    fullName: "",
+    username: "",
     password: "",
+    confirmPassword: "",
   };
 
   const validate = (values) => {
     const errors = {};
+
     if (!values.fullName) {
       errors.fullName = "Required";
     } else if (values.fullName.length < 3) {
@@ -21,33 +26,43 @@ export default function Register() {
     } else if (values.fullName.length > 50) {
       errors.fullName = "Can't exceed 50 characters";
     }
-    if (!values.email) {
+
+    if (!values.username) {
       errors.email = "Required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-      errors.email = "Invalid email address";
     }
+
     if (!values.password) {
       errors.password = "Required";
     } else if (values.password.length < 8) {
       errors.password = "Must be at least 8 characters";
     }
+
     if (!values.confirmPassword) {
       errors.confirmPassword = "Required";
     } else if (values.confirmPassword !== values.password) {
       errors.confirmPassword = "Passwords must match";
     }
+
     return errors;
   };
 
   const onSubmit = async (values, { setSubmitting, resetForm }) => {
+    const nameParts = values.fullName.trim().split(" ");
+    const firstName = nameParts.shift();
+    const lastName = nameParts.join(" ") || "";
+
     const userPayload = {
-      fullName: values.fullName,
-      email: values.email,
+      email: values.username,
+      username: values.fullName.replace(/\s+/g, "").toLowerCase(),
       password: values.password,
+      name: {
+        firstname: firstName,
+        lastname: lastName,
+      },
     };
 
     try {
-      await axios.post("'https://fakestoreapi.com/users", userPayload);
+      await axios.post("https://fakestoreapi.com/users", userPayload);
       toast.success("Sign-up successful! Redirecting to login…");
       resetForm();
       setTimeout(() => navigate("/login"), 2000);
@@ -62,6 +77,7 @@ export default function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-teal-50 p-6">
       <ToastContainer position="top-center" />
+
       <div className="bg-white shadow-2xl rounded-3xl max-w-md w-full p-8">
         <div className="flex flex-col items-center mb-6">
           <FaUserPlus className="text-5xl text-amber-200 mb-2" />
@@ -97,19 +113,19 @@ export default function Register() {
 
               <div>
                 <label
-                  htmlFor="email"
+                  htmlFor="username"
                   className="block text-amber-300 font-medium mb-1"
                 >
-                  Email Address
+                  Username
                 </label>
                 <Field
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="text"
+                  id="username"
+                  name="username"
                   className="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
                 <ErrorMessage
-                  name="email"
+                  name="username"
                   component="div"
                   className="text-red-600 text-sm mt-1"
                 />
@@ -162,6 +178,7 @@ export default function Register() {
               >
                 {isSubmitting ? "Registering..." : "Register"}
               </button>
+
               <Link to="/">
                 <button className="w-full py-2 bg-amber-200 text-amber-500 font-semibold rounded-lg hover:bg-amber-300 transition">
                   Home
@@ -172,7 +189,7 @@ export default function Register() {
         </Formik>
 
         <p className="mt-6 text-center text-amber-500">
-          Already have an account?
+          Already have an account?{" "}
           <Link
             to="/login"
             className="text-amber-500 font-medium hover:underline"
