@@ -65,15 +65,15 @@ export default function Navbar() {
   return (
     <>
       <ToastContainer />
-      <nav className="bg-[#131A22] text-white">
+      <nav className="bg-[#131A22] text-white py-3">
         <div className="max-w-screen-xl mx-auto flex items-center px-4 py-2">
           {/* Logo */}
-          <Link to="/" className="flex items-center mr-6">
+          <Link to="/" className="flex items-center justify-center mr-6">
             <img src="/amazon-w.png" alt="Amazon" className="h-10 w-auto" />
           </Link>
 
           {/* Deliver to Saudi Arabia */}
-          <div className="hidden sm:flex items-center mr-6 cursor-pointer hover:underline">
+          <div className="hidden sm:flex items-center mr-6 cursor-pointer hover:scale-105 transition">
             <FiMapPin className="text-xl mr-1" />
             <div className="text-xs">
               <p className="leading-none">Deliver to</p>
@@ -100,13 +100,13 @@ export default function Navbar() {
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-6 ml-6">
             {/* Language Selector */}
-            <div className="flex items-center cursor-pointer hover:scale-101">
+            <div className="flex items-center cursor-pointer hover:scale-105 transition">
               <span className="text-sm leading-none">🇺🇸</span>
               <FiChevronDown className="ml-1 text-sm" />
             </div>
 
             {/* Account & Lists */}
-            <div className="flex flex-col text-xs cursor-pointer hover:underline">
+            <div className="flex flex-col text-xs cursor-pointer hover:scale-105 transition">
               {isAuthenticated ? (
                 <>
                   <span className="leading-none">
@@ -131,7 +131,7 @@ export default function Navbar() {
             </div>
 
             {/* Returns & Orders */}
-            <div className="flex flex-col text-xs cursor-pointer hover:underline">
+            <div className="flex flex-col text-xs cursor-pointer hover:scale-105 transition">
               <span className="leading-none">Returns</span>
               <span className="font-semibold leading-none">& Orders</span>
             </div>
@@ -139,7 +139,7 @@ export default function Navbar() {
             {/* Cart */}
             <Link
               to="/cart"
-              className="relative flex items-center cursor-pointer hover:underline"
+              className="relative flex items-center cursor-pointer hover:scale-105 transition"
             >
               <FiShoppingCart className="text-2xl" />
               <span className="absolute top-0 right-0 bg-[#F3A847] text-black rounded-full text-xs font-bold w-5 h-5 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
