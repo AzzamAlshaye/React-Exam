@@ -44,7 +44,7 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4 md:px-8 lg:px-16">
+    <div className=" flex items-center justify-center min-h-screen bg-gray-100 py-8 px-4 md:px-8 lg:px-16">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="bg-gray-50 flex items-center justify-center p-6">
