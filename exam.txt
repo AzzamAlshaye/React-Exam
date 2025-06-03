@@ -30,11 +30,7 @@
 - Set up navigation using React Router.
 - Ensure a smooth transition between different pages, and handle edge cases like 404 errors gracefully.
 
-### Task 6: User Authentication (15)
 
-- Create a simple user authentication system.
-- Allow users to register, log in, and log out.
-- Display the user's name and SignIn-LogIn/sign-out button based on their authentication status.
 
 ### Task 7: Search and Filtering (5)
 
@@ -49,3 +45,15 @@
 
 
 api: https://fakestoreapi.com/product
+
+
+
+
+complete
+
+
+### Task 6: User Authentication (15)
+
+- Create a simple user authentication system.
+- Allow users to register, log in, and log out.
+- Display the user's name and SignIn-LogIn/sign-out button based on their authentication status.

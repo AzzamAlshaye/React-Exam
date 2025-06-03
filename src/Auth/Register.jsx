@@ -28,7 +28,7 @@ export default function Register() {
     }
 
     if (!values.username) {
-      errors.email = "Required";
+      errors.username = "Required";
     }
 
     if (!values.password) {
