@@ -1,5 +1,7 @@
+// src/components/Products.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -58,10 +60,16 @@ export default function Products() {
               <h2 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
                 {product.title}
               </h2>
-              <div className="mt-auto">
+              <div className="mt-auto flex items-center justify-between">
                 <span className="text-xl font-bold text-[#FF9900]">
                   ${product.price.toFixed(2)}
                 </span>
+                <Link
+                  to={`/products/${product.id}`}
+                  className="py-1 px-3 bg-[#FF9900] text-white font-semibold rounded-md hover:bg-orange-600 transition text-sm"
+                >
+                  View Details
+                </Link>
               </div>
             </div>
           </div>

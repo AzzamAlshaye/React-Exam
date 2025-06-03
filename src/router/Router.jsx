@@ -5,7 +5,9 @@ import Nav from "../components/Navbar";
 import Footer from "../components/Footer";
 import Register from "../Auth/Register";
 import LoginPage from "../Auth/Login";
-import HomePage from "../pages/HomePage";
+// import HomePage from "../pages/HomePage";
+import Products from "../pages/Products";
+import ProductDetails from "../pages/ProductDetails";
 
 function RootLayout() {
   return (
@@ -21,13 +23,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    children: [{ index: true, element: <HomePage /> }],
+    children: [
+      { path: "/", element: <Products /> },
+      { path: "products/:id", element: <ProductDetails /> },
+    ],
   },
 
   // standalone auth pages (no RootLayout)
   // { path: "register", element: <Register /> },
   { path: "login", element: <LoginPage /> },
-  { path: "register", element: <Register /> },
   { path: "register", element: <Register /> },
 ]);
 
