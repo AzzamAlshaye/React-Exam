@@ -65,10 +65,10 @@ export default function Navbar() {
   return (
     <>
       <ToastContainer />
-      <nav className="bg-[#131A22] text-white py-3">
-        <div className="max-w-screen-xl mx-auto flex items-center px-4 py-2">
+      <nav className="bg-[#131A22] text-white py-3   ">
+        <div className="max-w-screen-xl mx-auto flex items-center px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center justify-center mr-6">
+          <Link to="/" className="flex items-center mr-6">
             <img src="/amazon-w.png" alt="Amazon" className="h-10 w-auto" />
           </Link>
 
@@ -81,9 +81,9 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="flex flex-1 items-center">
-            <div className="hidden md:flex items-center bg-gray-100 text-black rounded-l-md px-2 py-1.5">
+          {/* Search Bar (desktop only) */}
+          <div className="hidden lg:flex flex-1 items-center">
+            <div className="flex items-center bg-gray-100 text-black rounded-l-md px-2 py-1.5">
               <span className="text-sm font-medium">All</span>
               <FiChevronDown className="ml-1 text-sm" />
             </div>
@@ -165,6 +165,18 @@ export default function Navbar() {
         {menuOpen && (
           <div className="lg:hidden bg-[#131A22] border-t border-gray-700">
             <div className="px-4 py-3 space-y-4">
+              {/* Mobile Search Bar */}
+              <div className="flex items-center">
+                <input
+                  type="text"
+                  placeholder="Search Amazon"
+                  className="flex-1 bg-white px-2 py-1 rounded-l-md focus:outline-none text-black"
+                />
+                <button className="bg-[#F3A847] hover:bg-[#ddb347] p-2 rounded-r-md">
+                  <FiSearch className="text-black" />
+                </button>
+              </div>
+
               {/* User or Sign In */}
               <div className="text-sm">
                 {isAuthenticated ? (

@@ -33,8 +33,7 @@ const router = createBrowserRouter([
     ],
   },
 
-  // standalone auth pages (no RootLayout)
-  // { path: "register", element: <Register /> },
+  // standalone auth pages (no RootLayout(nav/footer))
   { path: "login", element: <LoginPage /> },
   { path: "register", element: <Register /> },
 ]);
