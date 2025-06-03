@@ -17,6 +17,7 @@
 - Develop a shopping cart page that shows added products with quantity, price, and a total.
 - Allow users to remove items from the cart and update quantities.
 - Implement a "Checkout" button that navigates to the checkout page.
+- api: https://fakestoreapi.com/carts'
 
 ### Task 4: Checkout Page (15)
 
@@ -45,6 +46,13 @@
 
 
 api: https://fakestoreapi.com/product
+
+
+images for slideshow:
+https://m.media-amazon.com/images/I/61q5Pg3hO8L._SX3000_.jpg
+https://m.media-amazon.com/images/I/81hIlE5xocL._SX3000_.jpg
+https://m.media-amazon.com/images/I/619geyiQI5L._SX3000_.jpg
+https://m.media-amazon.com/images/I/61Yx5-N155L._SX3000_.jpg
 
 
 

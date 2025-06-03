@@ -8,6 +8,8 @@ import LoginPage from "../Auth/Login";
 // import HomePage from "../pages/HomePage";
 import Products from "../pages/Products";
 import ProductDetails from "../pages/ProductDetails";
+import Cart from "../pages/Cart";
+import Checkout from "../pages/Checkout";
 
 function RootLayout() {
   return (
@@ -26,6 +28,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Products /> },
       { path: "products/:id", element: <ProductDetails /> },
+      { path: "cart", element: <Cart /> },
+      { path: "checkout", element: <Checkout /> },
     ],
   },
 
