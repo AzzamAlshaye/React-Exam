@@ -206,7 +206,7 @@ export default function Checkout() {
               onChange={(e) => setCardNumber(e.target.value)}
               className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#FF9900]"
             />
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-2 lg:gap-0 space-x-4">
               <input
                 type="text"
                 placeholder="MM/YY"
