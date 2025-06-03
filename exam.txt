@@ -1,35 +1,12 @@
 ### **User Requirements:**
 
-### Task 1: Home Page (10)
 
-- Create a responsive homepage that displays a grid of products.
-- Each product should show the product name, image, and price.
-- Implement a "View Details" button that navigates to the product details page.
 
-### Task 2: Product Details Page (10)
 
-- Design a product details page that displays comprehensive information about a selected product.
-- Include product name, description, price, and an option to add the product to the shopping cart.
-- Provide a "Back to Home" link for easy navigation.
 
-### Task 3: Shopping Cart (15)
 
-- Develop a shopping cart page that shows added products with quantity, price, and a total.
-- Allow users to remove items from the cart and update quantities.
-- Implement a "Checkout" button that navigates to the checkout page.
-- api: https://fakestoreapi.com/carts'
 
-### Task 4: Checkout Page (15)
 
-- Design a responsive checkout page where users can review their selected items.
-- Collect shipping information (address, city, country) and payment details.
-- Implement a "Place Order" button to complete the purchase.
-- When the purchase is completed, a model appears showing him how much he paid, shipment will arrive (5 days), and the location of delivery and then  navigates to the Home page.
-
-### Task 5: Navigation and Routing (5)
-
-- Set up navigation using React Router.
-- Ensure a smooth transition between different pages, and handle edge cases like 404 errors gracefully.
 
 
 
@@ -38,11 +15,7 @@
 - Implement a search bar to filter products based on their names.
 - Include filtering options for categories, price ranges, etc.
 
-### Task 8: UI/UX Design (25)
 
-- Ensure a clean and intuitive user interface.
-- Use appropriate styling and layout techniques for a polished user experience.
-- Make sure the application is responsive and works well on various devices.
 
 
 api: https://fakestoreapi.com/product
@@ -65,3 +38,38 @@ complete
 - Create a simple user authentication system.
 - Allow users to register, log in, and log out.
 - Display the user's name and SignIn-LogIn/sign-out button based on their authentication status.
+
+### Task 1: Home Page (10)
+- Create a responsive homepage that displays a grid of products.
+- Each product should show the product name, image, and price.
+- Implement a "View Details" button that navigates to the product details page.
+### Task 2: Product Details Page (10)
+
+- Design a product details page that displays comprehensive information about a selected product.
+- Include product name, description, price, and an option to add the product to the shopping cart.
+- Provide a "Back to Home" link for easy navigation.
+
+
+### Task 3: Shopping Cart (15)
+
+- Develop a shopping cart page that shows added products with quantity, price, and a total.
+- Allow users to remove items from the cart and update quantities.
+- Implement a "Checkout" button that navigates to the checkout page.
+- api: https://fakestoreapi.com/carts'
+### Task 4: Checkout Page (15)
+
+- Design a responsive checkout page where users can review their selected items.
+- Collect shipping information (address, city, country) and payment details.
+- Implement a "Place Order" button to complete the purchase.
+- When the purchase is completed, a model appears showing him how much he paid, shipment will arrive (5 days), and the location of delivery and then  navigates to the Home page.
+
+### Task 5: Navigation and Routing (5)
+
+- Set up navigation using React Router.
+- Ensure a smooth transition between different pages, and handle edge cases like 404 errors gracefully.
+
+### Task 8: UI/UX Design (25)
+
+- Ensure a clean and intuitive user interface.
+- Use appropriate styling and layout techniques for a polished user experience.
+- Make sure the application is responsive and works well on various devices.
