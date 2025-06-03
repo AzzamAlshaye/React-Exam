@@ -75,13 +75,13 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-teal-50 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-amber-50 p-6">
       <ToastContainer position="top-center" />
 
       <div className="bg-white shadow-2xl rounded-3xl max-w-md w-full p-8">
         <div className="flex flex-col items-center mb-6">
-          <FaUserPlus className="text-5xl text-amber-200 mb-2" />
-          <h2 className="text-2xl font-bold text-amber-300">Create Account</h2>
+          <FaUserPlus className="text-5xl text-[#fd9a18] mb-2" />
+          <h2 className="text-2xl font-bold text-[#fd9a18]">Create Account</h2>
         </div>
 
         <Formik
@@ -94,7 +94,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="fullName"
-                  className="block text-amber-300 font-medium mb-1"
+                  className="block text-neutral-800 font-medium mb-1"
                 >
                   Full Name
                 </label>
@@ -102,7 +102,7 @@ export default function Register() {
                   type="text"
                   id="fullName"
                   name="fullName"
-                  className="w-full px-4 py-2 border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-200"
+                  className="w-full px-4 py-2 border border-[#fd9a18] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#df9b41]"
                 />
                 <ErrorMessage
                   name="fullName"
@@ -114,7 +114,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="username"
-                  className="block text-amber-300 font-medium mb-1"
+                  className="block text-neutral-800 font-medium mb-1"
                 >
                   Username
                 </label>
@@ -122,7 +122,7 @@ export default function Register() {
                   type="text"
                   id="username"
                   name="username"
-                  className="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="w-full px-4 py-2 border border-[#fd9a18] rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
                 <ErrorMessage
                   name="username"
@@ -134,7 +134,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="password"
-                  className="block text-amber-400 font-medium mb-1"
+                  className="block text-neutral-800 font-medium mb-1"
                 >
                   Password
                 </label>
@@ -142,7 +142,7 @@ export default function Register() {
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="w-full px-4 py-2 border border-[#fd9a18] rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
                 <ErrorMessage
                   name="password"
@@ -154,7 +154,7 @@ export default function Register() {
               <div>
                 <label
                   htmlFor="confirmPassword"
-                  className="block text-amber-500 font-medium mb-1"
+                  className="block text-neutral-800 font-medium mb-1"
                 >
                   Confirm Password
                 </label>
@@ -162,7 +162,7 @@ export default function Register() {
                   type="password"
                   id="confirmPassword"
                   name="confirmPassword"
-                  className="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="w-full px-4 py-2 border border-[#fd9a18] rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
                 <ErrorMessage
                   name="confirmPassword"
@@ -174,13 +174,13 @@ export default function Register() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-2 bg-amber-400 text-white font-semibold rounded-lg hover:bg-amber-600 transition disabled:opacity-50"
+                className="w-full py-2 bg-[#fd9a18] text-white font-semibold rounded-lg hover:bg-amber-600 transition disabled:opacity-50"
               >
                 {isSubmitting ? "Registering..." : "Register"}
               </button>
 
               <Link to="/">
-                <button className="w-full py-2 bg-amber-200 text-amber-500 font-semibold rounded-lg hover:bg-amber-300 transition">
+                <button className="w-full py-2 bg-[#f5b35d] text-neutral-700   font-semibold rounded-lg hover:bg-amber-600 transition">
                   Home
                 </button>
               </Link>
@@ -188,11 +188,11 @@ export default function Register() {
           )}
         </Formik>
 
-        <p className="mt-6 text-center text-amber-500">
+        <p className="mt-6 text-center text-[#fd9a18]">
           Already have an account?{" "}
           <Link
             to="/login"
-            className="text-amber-500 font-medium hover:underline"
+            className="text-[#fd9a18] font-medium hover:underline"
           >
             Log In
           </Link>
